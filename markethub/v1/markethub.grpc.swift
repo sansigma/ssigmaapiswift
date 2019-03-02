@@ -25,14 +25,14 @@ import Dispatch
 import SwiftGRPC
 import SwiftProtobuf
 
-internal protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesCall: ClientCallServerStreaming {
+public protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesCall: ClientCallServerStreaming {
   /// Do not call this directly, call `receive()` in the protocol extension below instead.
   func _receive(timeout: DispatchTime) throws -> Ssigmaapi_Markethub_V1_GetTradesResponse?
   /// Call this to wait for a result. Nonblocking.
   func receive(completion: @escaping (ResultOrRPCError<Ssigmaapi_Markethub_V1_GetTradesResponse?>) -> Void) throws
 }
 
-internal extension Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesCall {
+public extension Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesCall {
   /// Call this to wait for a result. Blocking.
   func receive(timeout: DispatchTime = .distantFuture) throws -> Ssigmaapi_Markethub_V1_GetTradesResponse? { return try self._receive(timeout: timeout) }
 }
@@ -41,14 +41,14 @@ fileprivate final class Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesCallBa
   override class var method: String { return "/ssigmaapi.markethub.v1.MarketHubServiceV1/GetTrades" }
 }
 
-internal protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksCall: ClientCallServerStreaming {
+public protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksCall: ClientCallServerStreaming {
   /// Do not call this directly, call `receive()` in the protocol extension below instead.
   func _receive(timeout: DispatchTime) throws -> Ssigmaapi_Markethub_V1_GetOrderBooksResponse?
   /// Call this to wait for a result. Nonblocking.
   func receive(completion: @escaping (ResultOrRPCError<Ssigmaapi_Markethub_V1_GetOrderBooksResponse?>) -> Void) throws
 }
 
-internal extension Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksCall {
+public extension Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksCall {
   /// Call this to wait for a result. Blocking.
   func receive(timeout: DispatchTime = .distantFuture) throws -> Ssigmaapi_Markethub_V1_GetOrderBooksResponse? { return try self._receive(timeout: timeout) }
 }
@@ -57,14 +57,14 @@ fileprivate final class Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksCa
   override class var method: String { return "/ssigmaapi.markethub.v1.MarketHubServiceV1/GetOrderBooks" }
 }
 
-internal protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBooksCall: ClientCallServerStreaming {
+public protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBooksCall: ClientCallServerStreaming {
   /// Do not call this directly, call `receive()` in the protocol extension below instead.
   func _receive(timeout: DispatchTime) throws -> Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse?
   /// Call this to wait for a result. Nonblocking.
   func receive(completion: @escaping (ResultOrRPCError<Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse?>) -> Void) throws
 }
 
-internal extension Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBooksCall {
+public extension Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBooksCall {
   /// Call this to wait for a result. Blocking.
   func receive(timeout: DispatchTime = .distantFuture) throws -> Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse? { return try self._receive(timeout: timeout) }
 }
@@ -75,7 +75,7 @@ fileprivate final class Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrd
 
 
 /// Instantiate Ssigmaapi_Markethub_V1_MarketHubServiceV1ServiceClient, then call methods of this protocol to make API calls.
-internal protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1Service: ServiceClient {
+public protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1Service: ServiceClient {
   /// Asynchronous. Server-streaming.
   /// Send the initial message.
   /// Use methods on the returned object to get streamed responses.
@@ -93,11 +93,11 @@ internal protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1Service: ServiceClien
 
 }
 
-internal final class Ssigmaapi_Markethub_V1_MarketHubServiceV1ServiceClient: ServiceClientBase, Ssigmaapi_Markethub_V1_MarketHubServiceV1Service {
+public final class Ssigmaapi_Markethub_V1_MarketHubServiceV1ServiceClient: ServiceClientBase, Ssigmaapi_Markethub_V1_MarketHubServiceV1Service {
   /// Asynchronous. Server-streaming.
   /// Send the initial message.
   /// Use methods on the returned object to get streamed responses.
-  internal func getTrades(_ request: Ssigmaapi_Markethub_V1_GetTradesRequest, completion: ((CallResult) -> Void)?) throws -> Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesCall {
+  public func getTrades(_ request: Ssigmaapi_Markethub_V1_GetTradesRequest, completion: ((CallResult) -> Void)?) throws -> Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesCall {
     return try Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesCallBase(channel)
       .start(request: request, metadata: metadata, completion: completion)
   }
@@ -105,7 +105,7 @@ internal final class Ssigmaapi_Markethub_V1_MarketHubServiceV1ServiceClient: Ser
   /// Asynchronous. Server-streaming.
   /// Send the initial message.
   /// Use methods on the returned object to get streamed responses.
-  internal func getOrderBooks(_ request: Ssigmaapi_Markethub_V1_GetOrderBooksRequest, completion: ((CallResult) -> Void)?) throws -> Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksCall {
+  public func getOrderBooks(_ request: Ssigmaapi_Markethub_V1_GetOrderBooksRequest, completion: ((CallResult) -> Void)?) throws -> Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksCall {
     return try Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksCallBase(channel)
       .start(request: request, metadata: metadata, completion: completion)
   }
@@ -113,7 +113,7 @@ internal final class Ssigmaapi_Markethub_V1_MarketHubServiceV1ServiceClient: Ser
   /// Asynchronous. Server-streaming.
   /// Send the initial message.
   /// Use methods on the returned object to get streamed responses.
-  internal func getTradesAndOrderBooks(_ request: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest, completion: ((CallResult) -> Void)?) throws -> Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBooksCall {
+  public func getTradesAndOrderBooks(_ request: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest, completion: ((CallResult) -> Void)?) throws -> Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBooksCall {
     return try Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBooksCallBase(channel)
       .start(request: request, metadata: metadata, completion: completion)
   }
@@ -123,18 +123,18 @@ internal final class Ssigmaapi_Markethub_V1_MarketHubServiceV1ServiceClient: Ser
 /// To build a server, implement a class that conforms to this protocol.
 /// If one of the methods returning `ServerStatus?` returns nil,
 /// it is expected that you have already returned a status to the client by means of `session.close`.
-internal protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1Provider: ServiceProvider {
+public protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1Provider: ServiceProvider {
   func getTrades(request: Ssigmaapi_Markethub_V1_GetTradesRequest, session: Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesSession) throws -> ServerStatus?
   func getOrderBooks(request: Ssigmaapi_Markethub_V1_GetOrderBooksRequest, session: Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksSession) throws -> ServerStatus?
   func getTradesAndOrderBooks(request: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest, session: Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBooksSession) throws -> ServerStatus?
 }
 
 extension Ssigmaapi_Markethub_V1_MarketHubServiceV1Provider {
-  internal var serviceName: String { return "ssigmaapi.markethub.v1.MarketHubServiceV1" }
+  public var serviceName: String { return "ssigmaapi.markethub.v1.MarketHubServiceV1" }
 
   /// Determines and calls the appropriate request handler, depending on the request's method.
   /// Throws `HandleMethodError.unknownMethod` for methods not handled by this service.
-  internal func handleMethod(_ method: String, handler: Handler) throws -> ServerStatus? {
+  public func handleMethod(_ method: String, handler: Handler) throws -> ServerStatus? {
     switch method {
     case "/ssigmaapi.markethub.v1.MarketHubServiceV1/GetTrades":
       return try Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesSessionBase(
@@ -157,7 +157,7 @@ extension Ssigmaapi_Markethub_V1_MarketHubServiceV1Provider {
   }
 }
 
-internal protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesSession: ServerSessionServerStreaming {
+public protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesSession: ServerSessionServerStreaming {
   /// Send a message to the stream. Nonblocking.
   func send(_ message: Ssigmaapi_Markethub_V1_GetTradesResponse, completion: @escaping (Error?) -> Void) throws
   /// Do not call this directly, call `send()` in the protocol extension below instead.
@@ -169,14 +169,14 @@ internal protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesSession: Ser
   func close(withStatus status: ServerStatus, completion: (() -> Void)?) throws
 }
 
-internal extension Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesSession {
+public extension Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesSession {
   /// Send a message to the stream and wait for the send operation to finish. Blocking.
   func send(_ message: Ssigmaapi_Markethub_V1_GetTradesResponse, timeout: DispatchTime = .distantFuture) throws { try self._send(message, timeout: timeout) }
 }
 
 fileprivate final class Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesSessionBase: ServerSessionServerStreamingBase<Ssigmaapi_Markethub_V1_GetTradesRequest, Ssigmaapi_Markethub_V1_GetTradesResponse>, Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesSession {}
 
-internal protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksSession: ServerSessionServerStreaming {
+public protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksSession: ServerSessionServerStreaming {
   /// Send a message to the stream. Nonblocking.
   func send(_ message: Ssigmaapi_Markethub_V1_GetOrderBooksResponse, completion: @escaping (Error?) -> Void) throws
   /// Do not call this directly, call `send()` in the protocol extension below instead.
@@ -188,14 +188,14 @@ internal protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksSession:
   func close(withStatus status: ServerStatus, completion: (() -> Void)?) throws
 }
 
-internal extension Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksSession {
+public extension Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksSession {
   /// Send a message to the stream and wait for the send operation to finish. Blocking.
   func send(_ message: Ssigmaapi_Markethub_V1_GetOrderBooksResponse, timeout: DispatchTime = .distantFuture) throws { try self._send(message, timeout: timeout) }
 }
 
 fileprivate final class Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksSessionBase: ServerSessionServerStreamingBase<Ssigmaapi_Markethub_V1_GetOrderBooksRequest, Ssigmaapi_Markethub_V1_GetOrderBooksResponse>, Ssigmaapi_Markethub_V1_MarketHubServiceV1GetOrderBooksSession {}
 
-internal protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBooksSession: ServerSessionServerStreaming {
+public protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBooksSession: ServerSessionServerStreaming {
   /// Send a message to the stream. Nonblocking.
   func send(_ message: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse, completion: @escaping (Error?) -> Void) throws
   /// Do not call this directly, call `send()` in the protocol extension below instead.
@@ -207,7 +207,7 @@ internal protocol Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBook
   func close(withStatus status: ServerStatus, completion: (() -> Void)?) throws
 }
 
-internal extension Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBooksSession {
+public extension Ssigmaapi_Markethub_V1_MarketHubServiceV1GetTradesAndOrderBooksSession {
   /// Send a message to the stream and wait for the send operation to finish. Blocking.
   func send(_ message: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse, timeout: DispatchTime = .distantFuture) throws { try self._send(message, timeout: timeout) }
 }

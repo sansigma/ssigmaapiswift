@@ -19,42 +19,42 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Ssigmaapi_Type_BidAsk {
+public struct Ssigmaapi_Type_BidAsk {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var price: Double = 0
+  public var price: Double = 0
 
-  var amount: Double = 0
+  public var amount: Double = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Ssigmaapi_Type_OrderBook {
+public struct Ssigmaapi_Type_OrderBook {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var exchange: String = String()
+  public var exchange: String = String()
 
-  var base: String = String()
+  public var base: String = String()
 
-  var quote: String = String()
+  public var quote: String = String()
 
-  var symbol: String = String()
+  public var symbol: String = String()
 
-  var bids: [Ssigmaapi_Type_BidAsk] = []
+  public var bids: [Ssigmaapi_Type_BidAsk] = []
 
-  var asks: [Ssigmaapi_Type_BidAsk] = []
+  public var asks: [Ssigmaapi_Type_BidAsk] = []
 
-  var timestamp: Int64 = 0
+  public var timestamp: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -62,13 +62,13 @@ struct Ssigmaapi_Type_OrderBook {
 fileprivate let _protobuf_package = "ssigmaapi.type"
 
 extension Ssigmaapi_Type_BidAsk: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BidAsk"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".BidAsk"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "price"),
     2: .same(proto: "amount"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeSingularDoubleField(value: &self.price)
@@ -78,7 +78,7 @@ extension Ssigmaapi_Type_BidAsk: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.price != 0 {
       try visitor.visitSingularDoubleField(value: self.price, fieldNumber: 1)
     }
@@ -88,7 +88,7 @@ extension Ssigmaapi_Type_BidAsk: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Type_BidAsk, rhs: Ssigmaapi_Type_BidAsk) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Type_BidAsk, rhs: Ssigmaapi_Type_BidAsk) -> Bool {
     if lhs.price != rhs.price {return false}
     if lhs.amount != rhs.amount {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -97,8 +97,8 @@ extension Ssigmaapi_Type_BidAsk: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 }
 
 extension Ssigmaapi_Type_OrderBook: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".OrderBook"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".OrderBook"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "exchange"),
     2: .same(proto: "base"),
     3: .same(proto: "quote"),
@@ -108,7 +108,7 @@ extension Ssigmaapi_Type_OrderBook: SwiftProtobuf.Message, SwiftProtobuf._Messag
     7: .same(proto: "timestamp"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeSingularStringField(value: &self.exchange)
@@ -123,7 +123,7 @@ extension Ssigmaapi_Type_OrderBook: SwiftProtobuf.Message, SwiftProtobuf._Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.exchange.isEmpty {
       try visitor.visitSingularStringField(value: self.exchange, fieldNumber: 1)
     }
@@ -148,7 +148,7 @@ extension Ssigmaapi_Type_OrderBook: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Type_OrderBook, rhs: Ssigmaapi_Type_OrderBook) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Type_OrderBook, rhs: Ssigmaapi_Type_OrderBook) -> Bool {
     if lhs.exchange != rhs.exchange {return false}
     if lhs.base != rhs.base {return false}
     if lhs.quote != rhs.quote {return false}

@@ -19,239 +19,239 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Ssigmaapi_Markethub_V1_GetTradesRequest {
+public struct Ssigmaapi_Markethub_V1_GetTradesRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var markets: [Ssigmaapi_Type_Market] = []
+  public var markets: [Ssigmaapi_Type_Market] = []
 
   /// unit is seconds
-  var velocityWindowingSize: Int64 = 0
+  public var velocityWindowingSize: Int64 = 0
 
-  var volatilityWindowingSize: Int64 = 0
+  public var volatilityWindowingSize: Int64 = 0
 
-  var volumeWindowingSize: Int64 = 0
+  public var volumeWindowingSize: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Ssigmaapi_Markethub_V1_GetTradesResponse {
+public struct Ssigmaapi_Markethub_V1_GetTradesResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var tradesWithMarket: [Ssigmaapi_Markethub_V1_TradesWithMarket] = []
+  public var tradesWithMarket: [Ssigmaapi_Markethub_V1_TradesWithMarket] = []
 
-  var exchangeStatus: [Ssigmaapi_Markethub_V1_ExchangeStatus] = []
+  public var exchangeStatus: [Ssigmaapi_Markethub_V1_ExchangeStatus] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Ssigmaapi_Markethub_V1_GetOrderBooksRequest {
+public struct Ssigmaapi_Markethub_V1_GetOrderBooksRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var market: [Ssigmaapi_Type_Market] = []
+  public var market: [Ssigmaapi_Type_Market] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Ssigmaapi_Markethub_V1_GetOrderBooksResponse {
+public struct Ssigmaapi_Markethub_V1_GetOrderBooksResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var all: [Ssigmaapi_Type_OrderBook] = []
+  public var all: [Ssigmaapi_Type_OrderBook] = []
 
-  var timestamp: Int64 = 0
+  public var timestamp: Int64 = 0
 
-  var exchangeStatus: [Ssigmaapi_Markethub_V1_ExchangeStatus] = []
+  public var exchangeStatus: [Ssigmaapi_Markethub_V1_ExchangeStatus] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest {
+public struct Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var tradesReq: Ssigmaapi_Markethub_V1_GetTradesRequest {
+  public var tradesReq: Ssigmaapi_Markethub_V1_GetTradesRequest {
     get {return _storage._tradesReq ?? Ssigmaapi_Markethub_V1_GetTradesRequest()}
     set {_uniqueStorage()._tradesReq = newValue}
   }
   /// Returns true if `tradesReq` has been explicitly set.
-  var hasTradesReq: Bool {return _storage._tradesReq != nil}
+  public var hasTradesReq: Bool {return _storage._tradesReq != nil}
   /// Clears the value of `tradesReq`. Subsequent reads from it will return its default value.
-  mutating func clearTradesReq() {_uniqueStorage()._tradesReq = nil}
+  public mutating func clearTradesReq() {_uniqueStorage()._tradesReq = nil}
 
-  var orderbooksReq: Ssigmaapi_Markethub_V1_GetOrderBooksRequest {
+  public var orderbooksReq: Ssigmaapi_Markethub_V1_GetOrderBooksRequest {
     get {return _storage._orderbooksReq ?? Ssigmaapi_Markethub_V1_GetOrderBooksRequest()}
     set {_uniqueStorage()._orderbooksReq = newValue}
   }
   /// Returns true if `orderbooksReq` has been explicitly set.
-  var hasOrderbooksReq: Bool {return _storage._orderbooksReq != nil}
+  public var hasOrderbooksReq: Bool {return _storage._orderbooksReq != nil}
   /// Clears the value of `orderbooksReq`. Subsequent reads from it will return its default value.
-  mutating func clearOrderbooksReq() {_uniqueStorage()._orderbooksReq = nil}
+  public mutating func clearOrderbooksReq() {_uniqueStorage()._orderbooksReq = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse {
+public struct Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var tradesRes: Ssigmaapi_Markethub_V1_GetTradesResponse {
+  public var tradesRes: Ssigmaapi_Markethub_V1_GetTradesResponse {
     get {return _storage._tradesRes ?? Ssigmaapi_Markethub_V1_GetTradesResponse()}
     set {_uniqueStorage()._tradesRes = newValue}
   }
   /// Returns true if `tradesRes` has been explicitly set.
-  var hasTradesRes: Bool {return _storage._tradesRes != nil}
+  public var hasTradesRes: Bool {return _storage._tradesRes != nil}
   /// Clears the value of `tradesRes`. Subsequent reads from it will return its default value.
-  mutating func clearTradesRes() {_uniqueStorage()._tradesRes = nil}
+  public mutating func clearTradesRes() {_uniqueStorage()._tradesRes = nil}
 
-  var orderbooksRes: Ssigmaapi_Markethub_V1_GetOrderBooksResponse {
+  public var orderbooksRes: Ssigmaapi_Markethub_V1_GetOrderBooksResponse {
     get {return _storage._orderbooksRes ?? Ssigmaapi_Markethub_V1_GetOrderBooksResponse()}
     set {_uniqueStorage()._orderbooksRes = newValue}
   }
   /// Returns true if `orderbooksRes` has been explicitly set.
-  var hasOrderbooksRes: Bool {return _storage._orderbooksRes != nil}
+  public var hasOrderbooksRes: Bool {return _storage._orderbooksRes != nil}
   /// Clears the value of `orderbooksRes`. Subsequent reads from it will return its default value.
-  mutating func clearOrderbooksRes() {_uniqueStorage()._orderbooksRes = nil}
+  public mutating func clearOrderbooksRes() {_uniqueStorage()._orderbooksRes = nil}
 
-  var exchangeStatus: [Ssigmaapi_Markethub_V1_ExchangeStatus] {
+  public var exchangeStatus: [Ssigmaapi_Markethub_V1_ExchangeStatus] {
     get {return _storage._exchangeStatus}
     set {_uniqueStorage()._exchangeStatus = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo {
+public struct Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var trade: Ssigmaapi_Type_Trade {
+  public var trade: Ssigmaapi_Type_Trade {
     get {return _storage._trade ?? Ssigmaapi_Type_Trade()}
     set {_uniqueStorage()._trade = newValue}
   }
   /// Returns true if `trade` has been explicitly set.
-  var hasTrade: Bool {return _storage._trade != nil}
+  public var hasTrade: Bool {return _storage._trade != nil}
   /// Clears the value of `trade`. Subsequent reads from it will return its default value.
-  mutating func clearTrade() {_uniqueStorage()._trade = nil}
+  public mutating func clearTrade() {_uniqueStorage()._trade = nil}
 
   /// 時間あたりの価格変化の移動平均
-  var velocity: Double {
+  public var velocity: Double {
     get {return _storage._velocity}
     set {_uniqueStorage()._velocity = newValue}
   }
 
-  var acceleration: Double {
+  public var acceleration: Double {
     get {return _storage._acceleration}
     set {_uniqueStorage()._acceleration = newValue}
   }
 
   /// 時間あたりの最大価格差
-  var volatility: Double {
+  public var volatility: Double {
     get {return _storage._volatility}
     set {_uniqueStorage()._volatility = newValue}
   }
 
-  var volumeBase: Double {
+  public var volumeBase: Double {
     get {return _storage._volumeBase}
     set {_uniqueStorage()._volumeBase = newValue}
   }
 
-  var volumeQuote: Double {
+  public var volumeQuote: Double {
     get {return _storage._volumeQuote}
     set {_uniqueStorage()._volumeQuote = newValue}
   }
 
   /// 時間あたりの(buy_volume - sell_volume)/volume
-  var momentumRate: Double {
+  public var momentumRate: Double {
     get {return _storage._momentumRate}
     set {_uniqueStorage()._momentumRate = newValue}
   }
 
-  var velocityWindowingSize: Int64 {
+  public var velocityWindowingSize: Int64 {
     get {return _storage._velocityWindowingSize}
     set {_uniqueStorage()._velocityWindowingSize = newValue}
   }
 
-  var volatilityWindowingSize: Int64 {
+  public var volatilityWindowingSize: Int64 {
     get {return _storage._volatilityWindowingSize}
     set {_uniqueStorage()._volatilityWindowingSize = newValue}
   }
 
-  var volumeWindowingSize: Int64 {
+  public var volumeWindowingSize: Int64 {
     get {return _storage._volumeWindowingSize}
     set {_uniqueStorage()._volumeWindowingSize = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct Ssigmaapi_Markethub_V1_TradesWithMarket {
+public struct Ssigmaapi_Markethub_V1_TradesWithMarket {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var market: Ssigmaapi_Type_Market {
+  public var market: Ssigmaapi_Type_Market {
     get {return _storage._market ?? Ssigmaapi_Type_Market()}
     set {_uniqueStorage()._market = newValue}
   }
   /// Returns true if `market` has been explicitly set.
-  var hasMarket: Bool {return _storage._market != nil}
+  public var hasMarket: Bool {return _storage._market != nil}
   /// Clears the value of `market`. Subsequent reads from it will return its default value.
-  mutating func clearMarket() {_uniqueStorage()._market = nil}
+  public mutating func clearMarket() {_uniqueStorage()._market = nil}
 
-  var trades: [Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo] {
+  public var trades: [Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo] {
     get {return _storage._trades}
     set {_uniqueStorage()._trades = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct Ssigmaapi_Markethub_V1_ExchangeStatus {
+public struct Ssigmaapi_Markethub_V1_ExchangeStatus {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var exchange: String = String()
+  public var exchange: String = String()
 
-  var `open`: Bool = false
+  public var `open`: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -259,15 +259,15 @@ struct Ssigmaapi_Markethub_V1_ExchangeStatus {
 fileprivate let _protobuf_package = "ssigmaapi.markethub.v1"
 
 extension Ssigmaapi_Markethub_V1_GetTradesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetTradesRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GetTradesRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "markets"),
     2: .standard(proto: "velocity_windowing_size"),
     3: .standard(proto: "volatility_windowing_size"),
     4: .standard(proto: "volume_windowing_size"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeRepeatedMessageField(value: &self.markets)
@@ -279,7 +279,7 @@ extension Ssigmaapi_Markethub_V1_GetTradesRequest: SwiftProtobuf.Message, SwiftP
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.markets.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.markets, fieldNumber: 1)
     }
@@ -295,7 +295,7 @@ extension Ssigmaapi_Markethub_V1_GetTradesRequest: SwiftProtobuf.Message, SwiftP
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Markethub_V1_GetTradesRequest, rhs: Ssigmaapi_Markethub_V1_GetTradesRequest) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Markethub_V1_GetTradesRequest, rhs: Ssigmaapi_Markethub_V1_GetTradesRequest) -> Bool {
     if lhs.markets != rhs.markets {return false}
     if lhs.velocityWindowingSize != rhs.velocityWindowingSize {return false}
     if lhs.volatilityWindowingSize != rhs.volatilityWindowingSize {return false}
@@ -306,13 +306,13 @@ extension Ssigmaapi_Markethub_V1_GetTradesRequest: SwiftProtobuf.Message, SwiftP
 }
 
 extension Ssigmaapi_Markethub_V1_GetTradesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetTradesResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GetTradesResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "trades_with_market"),
     2: .standard(proto: "exchange_status"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeRepeatedMessageField(value: &self.tradesWithMarket)
@@ -322,7 +322,7 @@ extension Ssigmaapi_Markethub_V1_GetTradesResponse: SwiftProtobuf.Message, Swift
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.tradesWithMarket.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.tradesWithMarket, fieldNumber: 1)
     }
@@ -332,7 +332,7 @@ extension Ssigmaapi_Markethub_V1_GetTradesResponse: SwiftProtobuf.Message, Swift
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Markethub_V1_GetTradesResponse, rhs: Ssigmaapi_Markethub_V1_GetTradesResponse) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Markethub_V1_GetTradesResponse, rhs: Ssigmaapi_Markethub_V1_GetTradesResponse) -> Bool {
     if lhs.tradesWithMarket != rhs.tradesWithMarket {return false}
     if lhs.exchangeStatus != rhs.exchangeStatus {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -341,12 +341,12 @@ extension Ssigmaapi_Markethub_V1_GetTradesResponse: SwiftProtobuf.Message, Swift
 }
 
 extension Ssigmaapi_Markethub_V1_GetOrderBooksRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetOrderBooksRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GetOrderBooksRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "market"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeRepeatedMessageField(value: &self.market)
@@ -355,14 +355,14 @@ extension Ssigmaapi_Markethub_V1_GetOrderBooksRequest: SwiftProtobuf.Message, Sw
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.market.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.market, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Markethub_V1_GetOrderBooksRequest, rhs: Ssigmaapi_Markethub_V1_GetOrderBooksRequest) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Markethub_V1_GetOrderBooksRequest, rhs: Ssigmaapi_Markethub_V1_GetOrderBooksRequest) -> Bool {
     if lhs.market != rhs.market {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -370,14 +370,14 @@ extension Ssigmaapi_Markethub_V1_GetOrderBooksRequest: SwiftProtobuf.Message, Sw
 }
 
 extension Ssigmaapi_Markethub_V1_GetOrderBooksResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetOrderBooksResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GetOrderBooksResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "all"),
     2: .same(proto: "timestamp"),
     3: .standard(proto: "exchange_status"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeRepeatedMessageField(value: &self.all)
@@ -388,7 +388,7 @@ extension Ssigmaapi_Markethub_V1_GetOrderBooksResponse: SwiftProtobuf.Message, S
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.all.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.all, fieldNumber: 1)
     }
@@ -401,7 +401,7 @@ extension Ssigmaapi_Markethub_V1_GetOrderBooksResponse: SwiftProtobuf.Message, S
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Markethub_V1_GetOrderBooksResponse, rhs: Ssigmaapi_Markethub_V1_GetOrderBooksResponse) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Markethub_V1_GetOrderBooksResponse, rhs: Ssigmaapi_Markethub_V1_GetOrderBooksResponse) -> Bool {
     if lhs.all != rhs.all {return false}
     if lhs.timestamp != rhs.timestamp {return false}
     if lhs.exchangeStatus != rhs.exchangeStatus {return false}
@@ -411,8 +411,8 @@ extension Ssigmaapi_Markethub_V1_GetOrderBooksResponse: SwiftProtobuf.Message, S
 }
 
 extension Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetTradesAndOrderBooksRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GetTradesAndOrderBooksRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "trades_req"),
     2: .standard(proto: "orderbooks_req"),
   ]
@@ -438,7 +438,7 @@ extension Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest: SwiftProtobuf.Me
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -451,7 +451,7 @@ extension Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest: SwiftProtobuf.Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._tradesReq {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -463,7 +463,7 @@ extension Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest: SwiftProtobuf.Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest, rhs: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest, rhs: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -480,8 +480,8 @@ extension Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksRequest: SwiftProtobuf.Me
 }
 
 extension Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetTradesAndOrderBooksResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GetTradesAndOrderBooksResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "trades_res"),
     2: .standard(proto: "orderbooks_res"),
     3: .standard(proto: "exchange_status"),
@@ -510,7 +510,7 @@ extension Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse: SwiftProtobuf.M
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -524,7 +524,7 @@ extension Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse: SwiftProtobuf.M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._tradesRes {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -539,7 +539,7 @@ extension Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse: SwiftProtobuf.M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse, rhs: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse, rhs: Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -557,8 +557,8 @@ extension Ssigmaapi_Markethub_V1_GetTradesAndOrderBooksResponse: SwiftProtobuf.M
 }
 
 extension Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TradeWithAdditionalInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".TradeWithAdditionalInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "trade"),
     2: .same(proto: "velocity"),
     3: .same(proto: "acceleration"),
@@ -608,7 +608,7 @@ extension Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo: SwiftProtobuf.Message,
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -629,7 +629,7 @@ extension Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo: SwiftProtobuf.Message,
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._trade {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -665,7 +665,7 @@ extension Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo: SwiftProtobuf.Message,
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo, rhs: Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo, rhs: Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -690,8 +690,8 @@ extension Ssigmaapi_Markethub_V1_TradeWithAdditionalInfo: SwiftProtobuf.Message,
 }
 
 extension Ssigmaapi_Markethub_V1_TradesWithMarket: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TradesWithMarket"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".TradesWithMarket"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "market"),
     2: .same(proto: "trades"),
   ]
@@ -717,7 +717,7 @@ extension Ssigmaapi_Markethub_V1_TradesWithMarket: SwiftProtobuf.Message, SwiftP
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -730,7 +730,7 @@ extension Ssigmaapi_Markethub_V1_TradesWithMarket: SwiftProtobuf.Message, SwiftP
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._market {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
@@ -742,7 +742,7 @@ extension Ssigmaapi_Markethub_V1_TradesWithMarket: SwiftProtobuf.Message, SwiftP
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Markethub_V1_TradesWithMarket, rhs: Ssigmaapi_Markethub_V1_TradesWithMarket) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Markethub_V1_TradesWithMarket, rhs: Ssigmaapi_Markethub_V1_TradesWithMarket) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -759,13 +759,13 @@ extension Ssigmaapi_Markethub_V1_TradesWithMarket: SwiftProtobuf.Message, SwiftP
 }
 
 extension Ssigmaapi_Markethub_V1_ExchangeStatus: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ExchangeStatus"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ExchangeStatus"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "exchange"),
     2: .same(proto: "open"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeSingularStringField(value: &self.exchange)
@@ -775,7 +775,7 @@ extension Ssigmaapi_Markethub_V1_ExchangeStatus: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.exchange.isEmpty {
       try visitor.visitSingularStringField(value: self.exchange, fieldNumber: 1)
     }
@@ -785,7 +785,7 @@ extension Ssigmaapi_Markethub_V1_ExchangeStatus: SwiftProtobuf.Message, SwiftPro
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Markethub_V1_ExchangeStatus, rhs: Ssigmaapi_Markethub_V1_ExchangeStatus) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Markethub_V1_ExchangeStatus, rhs: Ssigmaapi_Markethub_V1_ExchangeStatus) -> Bool {
     if lhs.exchange != rhs.exchange {return false}
     if lhs.`open` != rhs.`open` {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

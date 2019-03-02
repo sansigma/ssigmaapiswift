@@ -19,44 +19,44 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Ssigmaapi_Type_Trades {
+public struct Ssigmaapi_Type_Trades {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var trades: [Ssigmaapi_Type_Trade] = []
+  public var trades: [Ssigmaapi_Type_Trade] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Ssigmaapi_Type_Trade {
+public struct Ssigmaapi_Type_Trade {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var symbol: String = String()
+  public var symbol: String = String()
 
-  var tradeID: String = String()
+  public var tradeID: String = String()
 
-  var exchange: String = String()
+  public var exchange: String = String()
 
-  var base: String = String()
+  public var base: String = String()
 
-  var quote: String = String()
+  public var quote: String = String()
 
-  var price: Double = 0
+  public var price: Double = 0
 
-  var amount: Double = 0
+  public var amount: Double = 0
 
-  var timestamp: Int64 = 0
+  public var timestamp: Int64 = 0
 
-  var side: String = String()
+  public var side: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -64,12 +64,12 @@ struct Ssigmaapi_Type_Trade {
 fileprivate let _protobuf_package = "ssigmaapi.type"
 
 extension Ssigmaapi_Type_Trades: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Trades"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Trades"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "trades"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeRepeatedMessageField(value: &self.trades)
@@ -78,14 +78,14 @@ extension Ssigmaapi_Type_Trades: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.trades.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.trades, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Type_Trades, rhs: Ssigmaapi_Type_Trades) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Type_Trades, rhs: Ssigmaapi_Type_Trades) -> Bool {
     if lhs.trades != rhs.trades {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -93,8 +93,8 @@ extension Ssigmaapi_Type_Trades: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 }
 
 extension Ssigmaapi_Type_Trade: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Trade"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Trade"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "symbol"),
     2: .standard(proto: "trade_id"),
     3: .same(proto: "exchange"),
@@ -106,7 +106,7 @@ extension Ssigmaapi_Type_Trade: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     9: .same(proto: "side"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       switch fieldNumber {
       case 1: try decoder.decodeSingularStringField(value: &self.symbol)
@@ -123,7 +123,7 @@ extension Ssigmaapi_Type_Trade: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.symbol.isEmpty {
       try visitor.visitSingularStringField(value: self.symbol, fieldNumber: 1)
     }
@@ -154,7 +154,7 @@ extension Ssigmaapi_Type_Trade: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Ssigmaapi_Type_Trade, rhs: Ssigmaapi_Type_Trade) -> Bool {
+  public static func ==(lhs: Ssigmaapi_Type_Trade, rhs: Ssigmaapi_Type_Trade) -> Bool {
     if lhs.symbol != rhs.symbol {return false}
     if lhs.tradeID != rhs.tradeID {return false}
     if lhs.exchange != rhs.exchange {return false}

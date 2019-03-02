@@ -25,14 +25,14 @@ import Dispatch
 import SwiftGRPC
 import SwiftProtobuf
 
-internal protocol Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookCall: ClientCallServerStreaming {
+public protocol Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookCall: ClientCallServerStreaming {
   /// Do not call this directly, call `receive()` in the protocol extension below instead.
   func _receive(timeout: DispatchTime) throws -> Ssigmaapi_Type_OrderBook?
   /// Call this to wait for a result. Nonblocking.
   func receive(completion: @escaping (ResultOrRPCError<Ssigmaapi_Type_OrderBook?>) -> Void) throws
 }
 
-internal extension Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookCall {
+public extension Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookCall {
   /// Call this to wait for a result. Blocking.
   func receive(timeout: DispatchTime = .distantFuture) throws -> Ssigmaapi_Type_OrderBook? { return try self._receive(timeout: timeout) }
 }
@@ -43,7 +43,7 @@ fileprivate final class Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBoo
 
 
 /// Instantiate Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1ServiceClient, then call methods of this protocol to make API calls.
-internal protocol Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1Service: ServiceClient {
+public protocol Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1Service: ServiceClient {
   /// Asynchronous. Server-streaming.
   /// Send the initial message.
   /// Use methods on the returned object to get streamed responses.
@@ -51,11 +51,11 @@ internal protocol Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1Service: ServiceC
 
 }
 
-internal final class Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1ServiceClient: ServiceClientBase, Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1Service {
+public final class Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1ServiceClient: ServiceClientBase, Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1Service {
   /// Asynchronous. Server-streaming.
   /// Send the initial message.
   /// Use methods on the returned object to get streamed responses.
-  internal func getOrderBook(_ request: Ssigmaapi_Type_Market, completion: ((CallResult) -> Void)?) throws -> Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookCall {
+  public func getOrderBook(_ request: Ssigmaapi_Type_Market, completion: ((CallResult) -> Void)?) throws -> Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookCall {
     return try Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookCallBase(channel)
       .start(request: request, metadata: metadata, completion: completion)
   }
@@ -65,16 +65,16 @@ internal final class Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1ServiceClient:
 /// To build a server, implement a class that conforms to this protocol.
 /// If one of the methods returning `ServerStatus?` returns nil,
 /// it is expected that you have already returned a status to the client by means of `session.close`.
-internal protocol Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1Provider: ServiceProvider {
+public protocol Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1Provider: ServiceProvider {
   func getOrderBook(request: Ssigmaapi_Type_Market, session: Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookSession) throws -> ServerStatus?
 }
 
 extension Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1Provider {
-  internal var serviceName: String { return "ssigmaapi.pashirirest.v1.PashiriRestServiceV1" }
+  public var serviceName: String { return "ssigmaapi.pashirirest.v1.PashiriRestServiceV1" }
 
   /// Determines and calls the appropriate request handler, depending on the request's method.
   /// Throws `HandleMethodError.unknownMethod` for methods not handled by this service.
-  internal func handleMethod(_ method: String, handler: Handler) throws -> ServerStatus? {
+  public func handleMethod(_ method: String, handler: Handler) throws -> ServerStatus? {
     switch method {
     case "/ssigmaapi.pashirirest.v1.PashiriRestServiceV1/GetOrderBook":
       return try Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookSessionBase(
@@ -87,7 +87,7 @@ extension Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1Provider {
   }
 }
 
-internal protocol Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookSession: ServerSessionServerStreaming {
+public protocol Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookSession: ServerSessionServerStreaming {
   /// Send a message to the stream. Nonblocking.
   func send(_ message: Ssigmaapi_Type_OrderBook, completion: @escaping (Error?) -> Void) throws
   /// Do not call this directly, call `send()` in the protocol extension below instead.
@@ -99,7 +99,7 @@ internal protocol Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookSessi
   func close(withStatus status: ServerStatus, completion: (() -> Void)?) throws
 }
 
-internal extension Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookSession {
+public extension Ssigmaapi_Pashirirest_V1_PashiriRestServiceV1GetOrderBookSession {
   /// Send a message to the stream and wait for the send operation to finish. Blocking.
   func send(_ message: Ssigmaapi_Type_OrderBook, timeout: DispatchTime = .distantFuture) throws { try self._send(message, timeout: timeout) }
 }
